@@ -1,0 +1,30 @@
+{
+  "/Users/training-25/Desktop/CampusGo/CampusApp/Data/Repositories/EventRepositoryImpl.swift" : {
+    "const-values" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/EventRepositoryImpl.swiftconstvalues",
+    "dependencies" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/EventRepositoryImpl.d",
+    "diagnostics" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/EventRepositoryImpl.dia",
+    "object" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/EventRepositoryImpl.o",
+    "swift-dependencies" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/EventRepositoryImpl.swiftdeps"
+  },
+  "/Users/training-25/Desktop/CampusGo/CampusApp/Domain/Repositories/EventRepository.swift" : {
+    "const-values" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/EventRepository.swiftconstvalues",
+    "dependencies" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/EventRepository.d",
+    "diagnostics" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/EventRepository.dia",
+    "object" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/EventRepository.o",
+    "swift-dependencies" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/EventRepository.swiftdeps"
+  },
+  "/Users/training-25/Desktop/CampusGo/CampusApp/Domain/UseCases/FetchTimetableUseCase.swift" : {
+    "const-values" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/FetchTimetableUseCase.swiftconstvalues",
+    "dependencies" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/FetchTimetableUseCase.d",
+    "diagnostics" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/FetchTimetableUseCase.dia",
+    "object" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/FetchTimetableUseCase.o",
+    "swift-dependencies" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/FetchTimetableUseCase.swiftdeps"
+  },
+  "/Users/training-25/Desktop/CampusGo/CampusApp/Domain/UseCases/GetEventsUseCase.swift" : {
+    "const-values" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/GetEventsUseCase.swiftconstvalues",
+    "dependencies" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/GetEventsUseCase.d",
+    "diagnostics" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/GetEventsUseCase.dia",
+    "object" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/GetEventsUseCase.o",
+    "swift-dependencies" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/GetEventsUseCase.swiftdeps"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "/Users/training-25/Desktop/CampusGo/CampusApp/Data/Network/TimetableEntryDTO.swift" : {
+    "const-values" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/TimetableEntryDTO.swiftconstvalues",
+    "dependencies" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/TimetableEntryDTO.d",
+    "diagnostics" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/TimetableEntryDTO.dia",
+    "object" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/TimetableEntryDTO.o",
+    "swift-dependencies" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/TimetableEntryDTO.swiftdeps"
+  },
+  "/Users/training-25/Desktop/CampusGo/CampusApp/Data/SwiftData/TimetableEntrySD.swift" : {
+    "const-values" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/TimetableEntrySD.swiftconstvalues",
+    "dependencies" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/TimetableEntrySD.d",
+    "diagnostics" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/TimetableEntrySD.dia",
+    "object" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/TimetableEntrySD.o",
+    "swift-dependencies" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/TimetableEntrySD.swiftdeps"
+  },
+  "/Users/training-25/Desktop/CampusGo/CampusApp/Domain/Repositories/TimetableRepository.swift" : {
+    "const-values" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/TimetableRepository.swiftconstvalues",
+    "dependencies" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/TimetableRepository.d",
+    "diagnostics" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/TimetableRepository.dia",
+    "object" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/TimetableRepository.o",
+    "swift-dependencies" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/TimetableRepository.swiftdeps"
+  }
+}

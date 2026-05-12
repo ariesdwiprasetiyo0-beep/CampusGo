@@ -1,0 +1,30 @@
+{
+  "/Users/training-25/Desktop/CampusGo/CampusApp/Data/CoreData/KeychainService.swift" : {
+    "const-values" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/KeychainService.swiftconstvalues",
+    "dependencies" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/KeychainService.d",
+    "diagnostics" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/KeychainService.dia",
+    "object" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/KeychainService.o",
+    "swift-dependencies" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/KeychainService.swiftdeps"
+  },
+  "/Users/training-25/Desktop/CampusGo/CampusApp/Domain/Entities/HelpTicket.swift" : {
+    "const-values" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/HelpTicket.swiftconstvalues",
+    "dependencies" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/HelpTicket.d",
+    "diagnostics" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/HelpTicket.dia",
+    "object" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/HelpTicket.o",
+    "swift-dependencies" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/HelpTicket.swiftdeps"
+  },
+  "/Users/training-25/Desktop/CampusGo/CampusApp/Domain/Entities/Student.swift" : {
+    "const-values" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/Student.swiftconstvalues",
+    "dependencies" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/Student.d",
+    "diagnostics" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/Student.dia",
+    "object" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/Student.o",
+    "swift-dependencies" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/Student.swiftdeps"
+  },
+  "/Users/training-25/Desktop/CampusGo/CampusApp/Domain/UseCases/GetStudentProfileUseCase.swift" : {
+    "const-values" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/GetStudentProfileUseCase.swiftconstvalues",
+    "dependencies" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/GetStudentProfileUseCase.d",
+    "diagnostics" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/GetStudentProfileUseCase.dia",
+    "object" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/GetStudentProfileUseCase.o",
+    "swift-dependencies" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/GetStudentProfileUseCase.swiftdeps"
+  }
+}

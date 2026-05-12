@@ -1,0 +1,23 @@
+{
+  "/Users/training-25/Desktop/CampusGo/CampusApp/Data/Repositories/StudentRepositoryImpl.swift" : {
+    "const-values" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/StudentRepositoryImpl.swiftconstvalues",
+    "dependencies" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/StudentRepositoryImpl.d",
+    "diagnostics" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/StudentRepositoryImpl.dia",
+    "object" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/StudentRepositoryImpl.o",
+    "swift-dependencies" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/StudentRepositoryImpl.swiftdeps"
+  },
+  "/Users/training-25/Desktop/CampusGo/CampusApp/Domain/Repositories/StudentRepository.swift" : {
+    "const-values" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/StudentRepository.swiftconstvalues",
+    "dependencies" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/StudentRepository.d",
+    "diagnostics" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/StudentRepository.dia",
+    "object" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/StudentRepository.o",
+    "swift-dependencies" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/StudentRepository.swiftdeps"
+  },
+  "/Users/training-25/Desktop/CampusGo/CampusApp/Domain/UseCases/SubmitTicketUseCase.swift" : {
+    "const-values" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/SubmitTicketUseCase.swiftconstvalues",
+    "dependencies" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/SubmitTicketUseCase.d",
+    "diagnostics" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/SubmitTicketUseCase.dia",
+    "object" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/SubmitTicketUseCase.o",
+    "swift-dependencies" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/SubmitTicketUseCase.swiftdeps"
+  }
+}

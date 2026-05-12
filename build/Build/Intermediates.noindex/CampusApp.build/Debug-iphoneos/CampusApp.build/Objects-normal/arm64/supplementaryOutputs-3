@@ -1,0 +1,30 @@
+{
+  "/Users/training-25/Desktop/CampusGo/CampusApp/Application/DIContainer.swift" : {
+    "const-values" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/DIContainer.swiftconstvalues",
+    "dependencies" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/DIContainer.d",
+    "diagnostics" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/DIContainer.dia",
+    "object" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/DIContainer.o",
+    "swift-dependencies" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/DIContainer.swiftdeps"
+  },
+  "/Users/training-25/Desktop/CampusGo/CampusApp/Data/CoreData/CoreDataStack.swift" : {
+    "const-values" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/CoreDataStack.swiftconstvalues",
+    "dependencies" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/CoreDataStack.d",
+    "diagnostics" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/CoreDataStack.dia",
+    "object" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/CoreDataStack.o",
+    "swift-dependencies" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/CoreDataStack.swiftdeps"
+  },
+  "/Users/training-25/Desktop/CampusGo/CampusApp/Presentation/Events/EventListingView.swift" : {
+    "const-values" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/EventListingView.swiftconstvalues",
+    "dependencies" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/EventListingView.d",
+    "diagnostics" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/EventListingView.dia",
+    "object" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/EventListingView.o",
+    "swift-dependencies" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/EventListingView.swiftdeps"
+  },
+  "/Users/training-25/Desktop/CampusGo/CampusApp/Presentation/Events/EventListingViewModel.swift" : {
+    "const-values" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/EventListingViewModel.swiftconstvalues",
+    "dependencies" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/EventListingViewModel.d",
+    "diagnostics" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/EventListingViewModel.dia",
+    "object" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/EventListingViewModel.o",
+    "swift-dependencies" : "/Users/training-25/Desktop/CampusGo/build/Build/Intermediates.noindex/CampusApp.build/Debug-iphoneos/CampusApp.build/Objects-normal/arm64/EventListingViewModel.swiftdeps"
+  }
+}

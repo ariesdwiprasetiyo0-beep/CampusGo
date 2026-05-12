@@ -1,0 +1,567 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		009F3E6B3A65DF73E72900B7 /* CampusEventDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E4B693CD8ACD14656C3653 /* CampusEventDTO.swift */; };
+		0410D6C06C0C90E092237DD8 /* TimetableEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF492966F366804458EFDAE /* TimetableEntry.swift */; };
+		04FF28FE2C9243674A11417A /* TimetableRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA3413423FB4D4843AD07AC /* TimetableRepository.swift */; };
+		0D4F5D318866F130D48FEDB8 /* TimetableEntryDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CC11FBBD9AB9CBBBC5D6FB /* TimetableEntryDTO.swift */; };
+		11DB87CD94EF5CD4C4293781 /* MockRepositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BAC077EDEF5C2089DB1CAC /* MockRepositories.swift */; };
+		34DD4D642CBEEC523138F468 /* TimetableViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C352DE690CDEB0C30025AD69 /* TimetableViewModelTests.swift */; };
+		3559C3CE4950C5196FC6DBDC /* FetchTimetableUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382FBA584918DD3B6000EEFD /* FetchTimetableUseCase.swift */; };
+		3566C2E86AE4F636B4337E5A /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F49C1F83A5FA122FA402E9 /* AppCoordinator.swift */; };
+		36063B855567A11FDAB84AB7 /* TimetableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3519995D52CD3C044DC7F433 /* TimetableView.swift */; };
+		38E6BFB794A67622D2F1D07B /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4212227297759DF76680E0C8 /* APIError.swift */; };
+		3A5EAC7199E5D7576052FC82 /* TimetableRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EB1E7F07F429D17C106145 /* TimetableRepositoryImpl.swift */; };
+		3EF893582564F20F51781DCE /* StudentIDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C657DF407D4451DF434A4AD /* StudentIDView.swift */; };
+		4221F16FECA9BD02C1C28AC3 /* CommonViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AF288CD205DA1FDBE990F5 /* CommonViews.swift */; };
+		4363D6B1027198E35C6B669F /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78C25E862BDB2AC82AB9906 /* KeychainService.swift */; };
+		480B81A3B99944D0B3B0014C /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B960250804E79D5EC1309FBE /* APIClient.swift */; };
+		6037604A49AA5071DC4A4A57 /* TicketRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E88F7AD078A1F0FAF5BE84 /* TicketRepository.swift */; };
+		662D569A3CA626C8D9089C5D /* CampusEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B662B6721CBEE5F25918CA82 /* CampusEvent.swift */; };
+		68E9FBDE01F7533CEE87AF0C /* SubmitTicketUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E454A813BB0217332A62F /* SubmitTicketUseCase.swift */; };
+		753EBB2FE18F46BC3A2FC2B5 /* StudentDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054F808047A7E04E45931482 /* StudentDTO.swift */; };
+		7A64194B102DF9B944A9837B /* TicketRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2F202673BA7862E81055BE /* TicketRepositoryImpl.swift */; };
+		7C0E7E732B95E8F01C58B6D3 /* EventRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7BFAAD00FB4EE44090C97 /* EventRepositoryImpl.swift */; };
+		8194A0C6ED681687446E5F24 /* TimetableEntrySD.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D04A202E9BBA98845DA9D7 /* TimetableEntrySD.swift */; };
+		9783EA4F09C8FA7FE2851289 /* StudentRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8723B8883CC684BF241AEB7C /* StudentRepositoryImpl.swift */; };
+		A68CE539D2E6D577F6A8255C /* EventRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D6B89B8200FAD094CDB2F6 /* EventRepository.swift */; };
+		B03A39065BFAFDCE8A68DFC5 /* GetStudentProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5AE8FA17F42DFB3FB56F95 /* GetStudentProfileUseCase.swift */; };
+		BB1CB2DACD741B884C75C218 /* EventListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA946D830E0F0980ACC23DD3 /* EventListingViewModel.swift */; };
+		BD9CA7A729A1319D4C97BC6C /* EventListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEB46C43F76B8295E89F1E7 /* EventListingView.swift */; };
+		C412B1C9D475A9F0D3E35486 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2244880D2C0260174DD6C /* Student.swift */; };
+		CA3858485E50D1B907AD7B32 /* FetchTimetableUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE18F65148D135A192A4016 /* FetchTimetableUseCaseTests.swift */; };
+		D1A6C54E72E17D0B5443A199 /* StudentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3BC105E3A8B46081D77C3A /* StudentRepository.swift */; };
+		D93F3F30BFC76520060CBBE5 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E03BC0325744212A10780E /* DIContainer.swift */; };
+		DDF8A7B9B1DC338800F583D8 /* TimetableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254347079709B2E13611E326 /* TimetableViewModel.swift */; };
+		E264EF5FB058837DA4FF549B /* GetEventsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2518E7165442FE6C2D96CC /* GetEventsUseCase.swift */; };
+		E6DE3CBF8B68A8A6720D5B65 /* StudentIDViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE30DFAEE7CE8664C8274438 /* StudentIDViewModel.swift */; };
+		EBFCBA70DED8CAC64AEF4ACD /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0B1FEC2A3A4C4E3820D918 /* CoreDataStack.swift */; };
+		EFE46682BF4D27A1C536A41E /* CampusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBC7D64591DD7DCCA028F64 /* CampusApp.swift */; };
+		F7E835D49BDDC6280CE28BEA /* CampusEventSD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EED52CEB53502A9B959B0F /* CampusEventSD.swift */; };
+		FFDB3ECB2E27A8B78736AE1F /* HelpTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F77C14A09EF2D5B85FDDEF4 /* HelpTicket.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F32B9135D925520921C5C55B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3089F94871D7977B888BD989 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E2C44D2D6AB4CB5FDB96FF1;
+			remoteInfo = CampusApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		054F808047A7E04E45931482 /* StudentDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDTO.swift; sourceTree = "<group>"; };
+		0B2F202673BA7862E81055BE /* TicketRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketRepositoryImpl.swift; sourceTree = "<group>"; };
+		0C657DF407D4451DF434A4AD /* StudentIDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentIDView.swift; sourceTree = "<group>"; };
+		137835035AFA80BA384AEA3D /* CampusAppTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = CampusAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B3BC105E3A8B46081D77C3A /* StudentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentRepository.swift; sourceTree = "<group>"; };
+		1B5AE8FA17F42DFB3FB56F95 /* GetStudentProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStudentProfileUseCase.swift; sourceTree = "<group>"; };
+		1F77C14A09EF2D5B85FDDEF4 /* HelpTicket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpTicket.swift; sourceTree = "<group>"; };
+		254347079709B2E13611E326 /* TimetableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableViewModel.swift; sourceTree = "<group>"; };
+		26EED52CEB53502A9B959B0F /* CampusEventSD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusEventSD.swift; sourceTree = "<group>"; };
+		30E03BC0325744212A10780E /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		3519995D52CD3C044DC7F433 /* TimetableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableView.swift; sourceTree = "<group>"; };
+		366E454A813BB0217332A62F /* SubmitTicketUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitTicketUseCase.swift; sourceTree = "<group>"; };
+		37AF288CD205DA1FDBE990F5 /* CommonViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViews.swift; sourceTree = "<group>"; };
+		382FBA584918DD3B6000EEFD /* FetchTimetableUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTimetableUseCase.swift; sourceTree = "<group>"; };
+		4212227297759DF76680E0C8 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		4CEB46C43F76B8295E89F1E7 /* EventListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListingView.swift; sourceTree = "<group>"; };
+		4FA3413423FB4D4843AD07AC /* TimetableRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableRepository.swift; sourceTree = "<group>"; };
+		56BAC077EDEF5C2089DB1CAC /* MockRepositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepositories.swift; sourceTree = "<group>"; };
+		63CC11FBBD9AB9CBBBC5D6FB /* TimetableEntryDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableEntryDTO.swift; sourceTree = "<group>"; };
+		63E88F7AD078A1F0FAF5BE84 /* TicketRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketRepository.swift; sourceTree = "<group>"; };
+		68E4B693CD8ACD14656C3653 /* CampusEventDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusEventDTO.swift; sourceTree = "<group>"; };
+		7DE2244880D2C0260174DD6C /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		8723B8883CC684BF241AEB7C /* StudentRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentRepositoryImpl.swift; sourceTree = "<group>"; };
+		96E9CDD3C93C6D2697C51091 /* CampusApp.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = CampusApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA946D830E0F0980ACC23DD3 /* EventListingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListingViewModel.swift; sourceTree = "<group>"; };
+		AB0B1FEC2A3A4C4E3820D918 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		B1F49C1F83A5FA122FA402E9 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		B2E7BFAAD00FB4EE44090C97 /* EventRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRepositoryImpl.swift; sourceTree = "<group>"; };
+		B4D6B89B8200FAD094CDB2F6 /* EventRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRepository.swift; sourceTree = "<group>"; };
+		B662B6721CBEE5F25918CA82 /* CampusEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusEvent.swift; sourceTree = "<group>"; };
+		B960250804E79D5EC1309FBE /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		C352DE690CDEB0C30025AD69 /* TimetableViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableViewModelTests.swift; sourceTree = "<group>"; };
+		CB2518E7165442FE6C2D96CC /* GetEventsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEventsUseCase.swift; sourceTree = "<group>"; };
+		CCBC7D64591DD7DCCA028F64 /* CampusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusApp.swift; sourceTree = "<group>"; };
+		CDF492966F366804458EFDAE /* TimetableEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableEntry.swift; sourceTree = "<group>"; };
+		D7D04A202E9BBA98845DA9D7 /* TimetableEntrySD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableEntrySD.swift; sourceTree = "<group>"; };
+		DAE18F65148D135A192A4016 /* FetchTimetableUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTimetableUseCaseTests.swift; sourceTree = "<group>"; };
+		E1EB1E7F07F429D17C106145 /* TimetableRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableRepositoryImpl.swift; sourceTree = "<group>"; };
+		E78C25E862BDB2AC82AB9906 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		FE30DFAEE7CE8664C8274438 /* StudentIDViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentIDViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0F2496603D110C9C25C471B1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				EDC33913BD58DEAF2D46E149 /* CoreData */,
+				D7C8E6F2B3A2322F78FB8E99 /* Network */,
+				4F991699E4D94CA44DB346DF /* Repositories */,
+				A6E3E71CCECF4C6F7BAEE72B /* SwiftData */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		15735CDBD4A5269F2755B07B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				96E9CDD3C93C6D2697C51091 /* CampusApp.app */,
+				137835035AFA80BA384AEA3D /* CampusAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		198CAB0488864530867164FC /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				B4D6B89B8200FAD094CDB2F6 /* EventRepository.swift */,
+				1B3BC105E3A8B46081D77C3A /* StudentRepository.swift */,
+				63E88F7AD078A1F0FAF5BE84 /* TicketRepository.swift */,
+				4FA3413423FB4D4843AD07AC /* TimetableRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		2AFB4BB40010FE8CB8F3D6E4 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				C352DE690CDEB0C30025AD69 /* TimetableViewModelTests.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		2BD8697530C4DFD0E95DCF14 /* StudentID */ = {
+			isa = PBXGroup;
+			children = (
+				0C657DF407D4451DF434A4AD /* StudentIDView.swift */,
+				FE30DFAEE7CE8664C8274438 /* StudentIDViewModel.swift */,
+			);
+			path = StudentID;
+			sourceTree = "<group>";
+		};
+		30320FED9E6F3A94990DB010 /* CampusAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				5612851643948000E489D0FD /* Domain */,
+				B5C14663FC2699E716C0B43E /* Mocks */,
+				2AFB4BB40010FE8CB8F3D6E4 /* Presentation */,
+			);
+			path = CampusAppTests;
+			sourceTree = "<group>";
+		};
+		39725A326A3361D375FA1A06 /* CampusApp */ = {
+			isa = PBXGroup;
+			children = (
+				F1DF16B338A871B7B2EDEEEF /* Application */,
+				0F2496603D110C9C25C471B1 /* Data */,
+				6BAA690CDDD969B67046334D /* Domain */,
+				E09CF0B52D322E9A53F4D0F1 /* Presentation */,
+			);
+			path = CampusApp;
+			sourceTree = "<group>";
+		};
+		4A59E4A83AFC7F13642DE490 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				4CEB46C43F76B8295E89F1E7 /* EventListingView.swift */,
+				AA946D830E0F0980ACC23DD3 /* EventListingViewModel.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		4F991699E4D94CA44DB346DF /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				B2E7BFAAD00FB4EE44090C97 /* EventRepositoryImpl.swift */,
+				8723B8883CC684BF241AEB7C /* StudentRepositoryImpl.swift */,
+				0B2F202673BA7862E81055BE /* TicketRepositoryImpl.swift */,
+				E1EB1E7F07F429D17C106145 /* TimetableRepositoryImpl.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		5612851643948000E489D0FD /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				DAE18F65148D135A192A4016 /* FetchTimetableUseCaseTests.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		6B3F799B2031B11CC920B41A /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				382FBA584918DD3B6000EEFD /* FetchTimetableUseCase.swift */,
+				CB2518E7165442FE6C2D96CC /* GetEventsUseCase.swift */,
+				1B5AE8FA17F42DFB3FB56F95 /* GetStudentProfileUseCase.swift */,
+				366E454A813BB0217332A62F /* SubmitTicketUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		6BAA690CDDD969B67046334D /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				6C3EB993CFAFC77A6F13A864 /* Entities */,
+				198CAB0488864530867164FC /* Repositories */,
+				6B3F799B2031B11CC920B41A /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		6C3EB993CFAFC77A6F13A864 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				B662B6721CBEE5F25918CA82 /* CampusEvent.swift */,
+				1F77C14A09EF2D5B85FDDEF4 /* HelpTicket.swift */,
+				7DE2244880D2C0260174DD6C /* Student.swift */,
+				CDF492966F366804458EFDAE /* TimetableEntry.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		A6E3E71CCECF4C6F7BAEE72B /* SwiftData */ = {
+			isa = PBXGroup;
+			children = (
+				26EED52CEB53502A9B959B0F /* CampusEventSD.swift */,
+				D7D04A202E9BBA98845DA9D7 /* TimetableEntrySD.swift */,
+			);
+			path = SwiftData;
+			sourceTree = "<group>";
+		};
+		B5C14663FC2699E716C0B43E /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				56BAC077EDEF5C2089DB1CAC /* MockRepositories.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		D2B72849D7A6D60D37A90765 /* Timetable */ = {
+			isa = PBXGroup;
+			children = (
+				3519995D52CD3C044DC7F433 /* TimetableView.swift */,
+				254347079709B2E13611E326 /* TimetableViewModel.swift */,
+			);
+			path = Timetable;
+			sourceTree = "<group>";
+		};
+		D33F44CA8453D46391DAA8D9 = {
+			isa = PBXGroup;
+			children = (
+				39725A326A3361D375FA1A06 /* CampusApp */,
+				30320FED9E6F3A94990DB010 /* CampusAppTests */,
+				15735CDBD4A5269F2755B07B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D7C8E6F2B3A2322F78FB8E99 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B960250804E79D5EC1309FBE /* APIClient.swift */,
+				4212227297759DF76680E0C8 /* APIError.swift */,
+				68E4B693CD8ACD14656C3653 /* CampusEventDTO.swift */,
+				054F808047A7E04E45931482 /* StudentDTO.swift */,
+				63CC11FBBD9AB9CBBBC5D6FB /* TimetableEntryDTO.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		E09CF0B52D322E9A53F4D0F1 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				4A59E4A83AFC7F13642DE490 /* Events */,
+				EA9923897F396059053CE14B /* Shared */,
+				2BD8697530C4DFD0E95DCF14 /* StudentID */,
+				D2B72849D7A6D60D37A90765 /* Timetable */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		EA9923897F396059053CE14B /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				37AF288CD205DA1FDBE990F5 /* CommonViews.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		EDC33913BD58DEAF2D46E149 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				AB0B1FEC2A3A4C4E3820D918 /* CoreDataStack.swift */,
+				E78C25E862BDB2AC82AB9906 /* KeychainService.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		F1DF16B338A871B7B2EDEEEF /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				B1F49C1F83A5FA122FA402E9 /* AppCoordinator.swift */,
+				CCBC7D64591DD7DCCA028F64 /* CampusApp.swift */,
+				30E03BC0325744212A10780E /* DIContainer.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8E2C44D2D6AB4CB5FDB96FF1 /* CampusApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51FC33A98FCB1554E07F11FD /* Build configuration list for PBXNativeTarget "CampusApp" */;
+			buildPhases = (
+				174AB25312BDBAABF1768692 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CampusApp;
+			productName = CampusApp;
+			productReference = 96E9CDD3C93C6D2697C51091 /* CampusApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BD8C7015BCF43DFC3DFADAC7 /* CampusAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 39C461F82949F518601CF045 /* Build configuration list for PBXNativeTarget "CampusAppTests" */;
+			buildPhases = (
+				3A3DA559EFD5D5F62A6CA49A /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				162EF71DF2E9D4C1ECA12001 /* PBXTargetDependency */,
+			);
+			name = CampusAppTests;
+			productName = CampusAppTests;
+			productReference = 137835035AFA80BA384AEA3D /* CampusAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3089F94871D7977B888BD989 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					8E2C44D2D6AB4CB5FDB96FF1 = {
+						ProvisioningStyle = Automatic;
+					};
+					BD8C7015BCF43DFC3DFADAC7 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 5357139B29C2BAE35A1D874F /* Build configuration list for PBXProject "CampusApp" */;
+			compatibilityVersion = "Xcode 11.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = D33F44CA8453D46391DAA8D9;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8E2C44D2D6AB4CB5FDB96FF1 /* CampusApp */,
+				BD8C7015BCF43DFC3DFADAC7 /* CampusAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		174AB25312BDBAABF1768692 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				480B81A3B99944D0B3B0014C /* APIClient.swift in Sources */,
+				38E6BFB794A67622D2F1D07B /* APIError.swift in Sources */,
+				3566C2E86AE4F636B4337E5A /* AppCoordinator.swift in Sources */,
+				EFE46682BF4D27A1C536A41E /* CampusApp.swift in Sources */,
+				662D569A3CA626C8D9089C5D /* CampusEvent.swift in Sources */,
+				009F3E6B3A65DF73E72900B7 /* CampusEventDTO.swift in Sources */,
+				F7E835D49BDDC6280CE28BEA /* CampusEventSD.swift in Sources */,
+				4221F16FECA9BD02C1C28AC3 /* CommonViews.swift in Sources */,
+				EBFCBA70DED8CAC64AEF4ACD /* CoreDataStack.swift in Sources */,
+				D93F3F30BFC76520060CBBE5 /* DIContainer.swift in Sources */,
+				BD9CA7A729A1319D4C97BC6C /* EventListingView.swift in Sources */,
+				BB1CB2DACD741B884C75C218 /* EventListingViewModel.swift in Sources */,
+				A68CE539D2E6D577F6A8255C /* EventRepository.swift in Sources */,
+				7C0E7E732B95E8F01C58B6D3 /* EventRepositoryImpl.swift in Sources */,
+				3559C3CE4950C5196FC6DBDC /* FetchTimetableUseCase.swift in Sources */,
+				E264EF5FB058837DA4FF549B /* GetEventsUseCase.swift in Sources */,
+				B03A39065BFAFDCE8A68DFC5 /* GetStudentProfileUseCase.swift in Sources */,
+				FFDB3ECB2E27A8B78736AE1F /* HelpTicket.swift in Sources */,
+				4363D6B1027198E35C6B669F /* KeychainService.swift in Sources */,
+				C412B1C9D475A9F0D3E35486 /* Student.swift in Sources */,
+				753EBB2FE18F46BC3A2FC2B5 /* StudentDTO.swift in Sources */,
+				3EF893582564F20F51781DCE /* StudentIDView.swift in Sources */,
+				E6DE3CBF8B68A8A6720D5B65 /* StudentIDViewModel.swift in Sources */,
+				D1A6C54E72E17D0B5443A199 /* StudentRepository.swift in Sources */,
+				9783EA4F09C8FA7FE2851289 /* StudentRepositoryImpl.swift in Sources */,
+				68E9FBDE01F7533CEE87AF0C /* SubmitTicketUseCase.swift in Sources */,
+				6037604A49AA5071DC4A4A57 /* TicketRepository.swift in Sources */,
+				7A64194B102DF9B944A9837B /* TicketRepositoryImpl.swift in Sources */,
+				0410D6C06C0C90E092237DD8 /* TimetableEntry.swift in Sources */,
+				0D4F5D318866F130D48FEDB8 /* TimetableEntryDTO.swift in Sources */,
+				8194A0C6ED681687446E5F24 /* TimetableEntrySD.swift in Sources */,
+				04FF28FE2C9243674A11417A /* TimetableRepository.swift in Sources */,
+				3A5EAC7199E5D7576052FC82 /* TimetableRepositoryImpl.swift in Sources */,
+				36063B855567A11FDAB84AB7 /* TimetableView.swift in Sources */,
+				DDF8A7B9B1DC338800F583D8 /* TimetableViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A3DA559EFD5D5F62A6CA49A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA3858485E50D1B907AD7B32 /* FetchTimetableUseCaseTests.swift in Sources */,
+				11DB87CD94EF5CD4C4293781 /* MockRepositories.swift in Sources */,
+				34DD4D642CBEEC523138F468 /* TimetableViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		162EF71DF2E9D4C1ECA12001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8E2C44D2D6AB4CB5FDB96FF1 /* CampusApp */;
+			targetProxy = F32B9135D925520921C5C55B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1105983DDA92DFDAE6CE66B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.campusgo.CampusAppTests;
+				SWIFT_VERSION = 5.9;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CampusApp.app/CampusApp";
+			};
+			name = Release;
+		};
+		631FD702050AD970B534F585 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.campusgo.CampusApp;
+				PRODUCT_NAME = CampusApp;
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		95BCEB3B5ADF3E88A9194836 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		98FF7B48009F98F90A6A3F45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.campusgo.CampusApp;
+				PRODUCT_NAME = CampusApp;
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		C57DA9BFC15551537A2972AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		D4795ECA840982DCF3024CB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.campusgo.CampusAppTests;
+				SWIFT_VERSION = 5.9;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CampusApp.app/CampusApp";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		39C461F82949F518601CF045 /* Build configuration list for PBXNativeTarget "CampusAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4795ECA840982DCF3024CB5 /* Debug */,
+				1105983DDA92DFDAE6CE66B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		51FC33A98FCB1554E07F11FD /* Build configuration list for PBXNativeTarget "CampusApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98FF7B48009F98F90A6A3F45 /* Debug */,
+				631FD702050AD970B534F585 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5357139B29C2BAE35A1D874F /* Build configuration list for PBXProject "CampusApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95BCEB3B5ADF3E88A9194836 /* Debug */,
+				C57DA9BFC15551537A2972AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3089F94871D7977B888BD989 /* Project object */;
+}
