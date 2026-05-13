@@ -1,4 +1,6 @@
 import Foundation
+import SwiftUI
+import _MapKit_SwiftUI
 import MapKit
 import Observation
 
@@ -8,12 +10,12 @@ final class CampusMapViewModel {
 
     // MARK: - State
     var buildings: [CampusBuilding] = MockCampusBuildings.all
-    var selectedBuilding: CampusBuilding? = nil
+    var selectedBuildingID: UUID? = nil
     var searchText: String = ""
     var selectedCategory: BuildingCategory? = nil
     var isShowingList: Bool = false
 
-    /// Camera position centered on campus.
+    /// Camera position centered on UI campus.
     var cameraPosition: MapCameraPosition = .region(
         MKCoordinateRegion(
             center: CLLocationCoordinate2D(latitude: -6.3615, longitude: 106.8276),
@@ -22,6 +24,11 @@ final class CampusMapViewModel {
     )
 
     // MARK: - Derived
+
+    var selectedBuilding: CampusBuilding? {
+        guard let id = selectedBuildingID else { return nil }
+        return buildings.first { $0.id == id }
+    }
 
     var filteredBuildings: [CampusBuilding] {
         buildings.filter { building in
@@ -37,22 +44,17 @@ final class CampusMapViewModel {
         }
     }
 
-    var searchSuggestions: [CampusBuilding] {
-        guard !searchText.isEmpty else { return [] }
-        return filteredBuildings.prefix(5).map { $0 }
-    }
-
     // MARK: - Actions
 
     func select(_ building: CampusBuilding) {
-        selectedBuilding = building
+        selectedBuildingID = building.id
         isShowingList = false
         withAnimation(.easeInOut(duration: 0.4)) {
             cameraPosition = .region(
                 MKCoordinateRegion(
                     center: CLLocationCoordinate2D(
-                        latitude: building.coordinate.latitude - 0.001,
-                        longitude: building.coordinate.longitude
+                        latitude: building.latitude - 0.001,
+                        longitude: building.longitude
                     ),
                     span: MKCoordinateSpan(latitudeDelta: 0.004, longitudeDelta: 0.004)
                 )
@@ -60,8 +62,20 @@ final class CampusMapViewModel {
         }
     }
 
+    func selectByID(_ id: UUID?) {
+        guard let id, let building = buildings.first(where: { $0.id == id }) else {
+            selectedBuildingID = nil
+            return
+        }
+        select(building)
+    }
+
+    func dismissSelection() {
+        selectedBuildingID = nil
+    }
+
     func resetCamera() {
-        selectedBuilding = nil
+        selectedBuildingID = nil
         withAnimation(.easeInOut(duration: 0.4)) {
             cameraPosition = .region(
                 MKCoordinateRegion(
@@ -74,6 +88,6 @@ final class CampusMapViewModel {
 
     func setCategory(_ category: BuildingCategory?) {
         selectedCategory = category
-        selectedBuilding = nil
+        selectedBuildingID = nil
     }
 }

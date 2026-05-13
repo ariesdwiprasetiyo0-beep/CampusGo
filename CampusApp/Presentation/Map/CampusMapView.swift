@@ -4,12 +4,14 @@ import MapKit
 // MARK: - CampusMapView
 struct CampusMapView: View {
     @State private var viewModel = CampusMapViewModel()
+    // Map selection works with UUID (Hashable) — we map it back to a building via ViewModel
+    @State private var mapSelection: UUID? = nil
 
     var body: some View {
         ZStack(alignment: .bottom) {
-            // ── Map ──────────────────────────────────────────────────────────
-            Map(position: $viewModel.cameraPosition, selection: $viewModel.selectedBuilding) {
-                // Building markers
+
+            // ── Map ───────────────────────────────────────────────────────────
+            Map(position: $viewModel.cameraPosition, selection: $mapSelection) {
                 ForEach(viewModel.filteredBuildings) { building in
                     Marker(
                         building.shortName,
@@ -17,10 +19,8 @@ struct CampusMapView: View {
                         coordinate: building.coordinate
                     )
                     .tint(categoryTint(building.category))
-                    .tag(building)
+                    .tag(building.id)
                 }
-
-                // User location
                 UserAnnotation()
             }
             .mapStyle(.standard(elevation: .realistic))
@@ -30,8 +30,11 @@ struct CampusMapView: View {
                 MapScaleView()
             }
             .ignoresSafeArea(edges: .top)
+            .onChange(of: mapSelection) { _, newID in
+                viewModel.selectByID(newID)
+            }
 
-            // ── Overlay Stack ─────────────────────────────────────────────────
+            // ── Overlay ───────────────────────────────────────────────────────
             VStack(spacing: 0) {
                 searchAndFilterBar
                     .padding(.horizontal, 12)
@@ -39,10 +42,10 @@ struct CampusMapView: View {
 
                 Spacer()
 
-                // Selected building card or building count badge
                 if let building = viewModel.selectedBuilding {
                     BuildingDetailCard(building: building) {
-                        viewModel.selectedBuilding = nil
+                        mapSelection = nil
+                        viewModel.dismissSelection()
                     } onShowList: {
                         viewModel.isShowingList = true
                     }
@@ -55,7 +58,7 @@ struct CampusMapView: View {
                         .transition(.opacity)
                 }
             }
-            .animation(.spring(response: 0.35, dampingFraction: 0.82), value: viewModel.selectedBuilding?.id)
+            .animation(.spring(response: 0.35, dampingFraction: 0.82), value: viewModel.selectedBuildingID)
         }
         .navigationTitle("Peta Kampus")
         .navigationBarTitleDisplayMode(.inline)
@@ -67,9 +70,10 @@ struct CampusMapView: View {
                     Label("Daftar Gedung", systemImage: "list.bullet")
                 }
             }
-            if viewModel.selectedBuilding != nil || viewModel.selectedCategory != nil {
+            if viewModel.selectedBuildingID != nil || viewModel.selectedCategory != nil {
                 ToolbarItem(placement: .topBarLeading) {
                     Button("Reset") {
+                        mapSelection = nil
                         viewModel.resetCamera()
                         viewModel.selectedCategory = nil
                         viewModel.searchText = ""
@@ -78,11 +82,8 @@ struct CampusMapView: View {
             }
         }
         .sheet(isPresented: $viewModel.isShowingList) {
-            BuildingListSheet(viewModel: viewModel)
-        }
-        // Sync map tap → viewModel selection
-        .onChange(of: viewModel.selectedBuilding) { _, building in
-            if let building {
+            BuildingListSheet(viewModel: viewModel) { building in
+                mapSelection = building.id
                 viewModel.select(building)
             }
         }
@@ -91,7 +92,6 @@ struct CampusMapView: View {
     // MARK: - Search & Filter Bar
     private var searchAndFilterBar: some View {
         VStack(spacing: 8) {
-            // Search field
             HStack(spacing: 10) {
                 Image(systemName: "magnifyingglass")
                     .foregroundStyle(.secondary)
@@ -118,7 +118,6 @@ struct CampusMapView: View {
             .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
             .shadow(color: .black.opacity(0.08), radius: 6, x: 0, y: 2)
 
-            // Category filter chips
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 8) {
                     CategoryMapChip(
@@ -211,7 +210,6 @@ struct CategoryMapChip: View {
 }
 
 // MARK: - BuildingDetailCard
-/// Bottom card shown when a map marker is tapped.
 struct BuildingDetailCard: View {
     let building: CampusBuilding
     let onDismiss: () -> Void
@@ -219,37 +217,29 @@ struct BuildingDetailCard: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 14) {
-            // Header
             HStack(alignment: .top, spacing: 12) {
-                // Category icon
                 ZStack {
                     RoundedRectangle(cornerRadius: 10, style: .continuous)
                         .fill(Color.appAccent.opacity(0.12))
                         .frame(width: 44, height: 44)
                     Image(systemName: building.category.sfSymbol)
                         .font(.system(size: 20))
-                        .foregroundStyle(.appAccent)
+                        .foregroundStyle(Color.appAccent)
                 }
 
                 VStack(alignment: .leading, spacing: 3) {
                     Text(building.name)
                         .font(.headline)
                         .lineLimit(2)
-                    HStack(spacing: 6) {
+                    HStack(spacing: 4) {
                         Text(building.category.rawValue)
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
                         Text("·")
-                            .foregroundStyle(.secondary)
                         Text("\(building.floors) lantai")
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
                         Text("·")
-                            .foregroundStyle(.secondary)
                         Text(building.openHours)
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
                     }
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
                 }
 
                 Spacer(minLength: 0)
@@ -262,13 +252,11 @@ struct BuildingDetailCard: View {
                 .buttonStyle(.plain)
             }
 
-            // Description
             Text(building.description)
                 .font(.subheadline)
                 .foregroundStyle(.secondary)
                 .lineLimit(3)
 
-            // Facilities
             if !building.facilities.isEmpty {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 8) {
@@ -284,7 +272,6 @@ struct BuildingDetailCard: View {
                 }
             }
 
-            // Directions button
             Button {
                 openMaps(for: building)
             } label: {
@@ -312,34 +299,36 @@ struct BuildingDetailCard: View {
 }
 
 // MARK: - BuildingListSheet
-/// Searchable full-screen sheet of all buildings.
 struct BuildingListSheet: View {
-    @Bindable var viewModel: CampusMapViewModel
+    let viewModel: CampusMapViewModel
+    let onSelect: (CampusBuilding) -> Void
     @Environment(\.dismiss) private var dismiss
+    @State private var localSearch = ""
+    @State private var localCategory: BuildingCategory? = nil
+
+    private var filtered: [CampusBuilding] {
+        viewModel.buildings.filter { building in
+            let matchesSearch = localSearch.isEmpty ||
+                building.name.localizedCaseInsensitiveContains(localSearch) ||
+                building.shortName.localizedCaseInsensitiveContains(localSearch) ||
+                building.category.rawValue.localizedCaseInsensitiveContains(localSearch)
+            let matchesCategory = localCategory == nil || building.category == localCategory
+            return matchesSearch && matchesCategory
+        }
+    }
 
     var body: some View {
         NavigationStack {
             List {
-                // Category filter
                 Section {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 8) {
-                            CategoryChip(
-                                title: "Semua",
-                                isSelected: viewModel.selectedCategory == nil,
-                                color: .appAccent
-                            ) {
-                                viewModel.setCategory(nil)
+                            CategoryChip(title: "Semua", isSelected: localCategory == nil, color: .appAccent) {
+                                localCategory = nil
                             }
                             ForEach(BuildingCategory.allCases) { cat in
-                                CategoryChip(
-                                    title: cat.rawValue,
-                                    isSelected: viewModel.selectedCategory == cat,
-                                    color: .appAccent
-                                ) {
-                                    viewModel.setCategory(
-                                        viewModel.selectedCategory == cat ? nil : cat
-                                    )
+                                CategoryChip(title: cat.rawValue, isSelected: localCategory == cat, color: .appAccent) {
+                                    localCategory = localCategory == cat ? nil : cat
                                 }
                             }
                         }
@@ -350,17 +339,16 @@ struct BuildingListSheet: View {
                     .listRowSeparator(.hidden)
                 }
 
-                // Results
-                if viewModel.filteredBuildings.isEmpty {
-                    ContentUnavailableView.search(text: viewModel.searchText)
+                if filtered.isEmpty {
+                    ContentUnavailableView.search(text: localSearch)
                         .listRowBackground(Color.clear)
                         .listRowSeparator(.hidden)
                 } else {
-                    ForEach(viewModel.filteredBuildings) { building in
+                    ForEach(filtered) { building in
                         Button {
                             dismiss()
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                                viewModel.select(building)
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
+                                onSelect(building)
                             }
                         } label: {
                             BuildingListRow(building: building)
@@ -371,7 +359,7 @@ struct BuildingListSheet: View {
             }
             .listStyle(.insetGrouped)
             .searchable(
-                text: $viewModel.searchText,
+                text: $localSearch,
                 placement: .navigationBarDrawer(displayMode: .always),
                 prompt: "Cari nama atau kategori gedung"
             )
@@ -398,7 +386,7 @@ struct BuildingListRow: View {
                     .frame(width: 40, height: 40)
                 Image(systemName: building.category.sfSymbol)
                     .font(.system(size: 16))
-                    .foregroundStyle(.appAccent)
+                    .foregroundStyle(Color.appAccent)
             }
 
             VStack(alignment: .leading, spacing: 3) {
@@ -421,7 +409,7 @@ struct BuildingListRow: View {
 
             Image(systemName: "chevron.right")
                 .font(.caption.weight(.semibold))
-                .foregroundStyle(.tertiaryLabel)
+                .foregroundStyle(Color(.tertiaryLabel))
         }
         .padding(.vertical, 2)
     }
