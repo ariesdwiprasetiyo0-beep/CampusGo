@@ -10,7 +10,7 @@ struct AppCoordinator: View {
 
     var body: some View {
         TabView {
-            Tab("Jadwal", systemImage: "calendar") {
+            Tab("Timetable", systemImage: "calendar") {
                 NavigationStack {
                     TimetableView(viewModel: container.makeTimetableViewModel())
                 }
