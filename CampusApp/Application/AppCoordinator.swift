@@ -1,41 +1,39 @@
 import SwiftUI
 
+// MARK: - App Root: TabView Navigation
+// Uses TabView as the top-level navigation pattern per Apple HIG.
+// Each tab owns its own NavigationStack for independent navigation stacks.
+
 @MainActor
 struct AppCoordinator: View {
     let container: DIContainer
 
-    @State private var navigationPath: NavigationPath = NavigationPath()
-
     var body: some View {
-        NavigationStack(path: $navigationPath) {
-            VStack(spacing: 16) {
-                Text("Campus App")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-
-                VStack(spacing: 12) {
-                    NavigationLink("Jadwal Kuliah", value: "timetable")
-                    NavigationLink("Event", value: "events")
-                    NavigationLink("Kartu Mahasiswa", value: "studentid")
-                }
-                .buttonStyle(.bordered)
-
-                Spacer()
-            }
-            .padding()
-            .navigationTitle("Home")
-            .navigationDestination(for: String.self) { destination in
-                switch destination {
-                case "timetable":
+        TabView {
+            Tab("Jadwal", systemImage: "calendar") {
+                NavigationStack {
                     TimetableView(viewModel: container.makeTimetableViewModel())
-                case "events":
+                }
+            }
+
+            Tab("Event", systemImage: "ticket") {
+                NavigationStack {
                     EventListingView(viewModel: container.makeEventListingViewModel())
-                case "studentid":
+                }
+            }
+
+            Tab("Peta", systemImage: "map") {
+                NavigationStack {
+                    CampusMapView()
+                }
+            }
+
+            Tab("Kartu Mahasiswa", systemImage: "person.crop.rectangle") {
+                NavigationStack {
                     StudentIDView(viewModel: container.makeStudentIDViewModel())
-                default:
-                    Text("Unknown destination")
                 }
             }
         }
+        .tint(.appAccent)
     }
 }

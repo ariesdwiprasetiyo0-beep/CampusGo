@@ -1,16 +1,18 @@
 import SwiftData
+import Foundation
 
 final class TimetableRepositoryImpl: TimetableRepository {
+
     private let modelContext: ModelContext
 
     init(modelContext: ModelContext) {
         self.modelContext = modelContext
     }
 
-    func fetchEntries(for week: DateInterval) async throws -> [TimetableEntry] {
+    func fetchEntries(from start: Date, to end: Date) async throws -> [TimetableEntry] {
         let descriptor = FetchDescriptor<TimetableEntrySD>(
-            predicate: #Predicate {
-                $0.startTime >= week.start && $0.startTime < week.end
+            predicate: #Predicate<TimetableEntrySD> {
+                $0.startTime >= start && $0.startTime < end
             },
             sortBy: [SortDescriptor(\.startTime)]
         )
@@ -19,7 +21,7 @@ final class TimetableRepositoryImpl: TimetableRepository {
     }
 
     func save(_ entries: [TimetableEntry]) async throws {
-        entries.forEach { entry in
+        for entry in entries {
             let model = TimetableEntrySD(from: entry)
             modelContext.insert(model)
         }

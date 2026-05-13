@@ -1,48 +1,67 @@
 import SwiftUI
 import SwiftData
 
+// MARK: - Build Configuration
+// Set `useMockData = true` for local development / previews.
+// Set to `false` to use real SwiftData + CoreData + API repositories.
+private let useMockData = true
+
 @MainActor
 final class DIContainer {
-    // MARK: - Infrastructure
+    // MARK: - Infrastructure (only used when useMockData == false)
 
-    let modelContainer: ModelContainer
-    let coreDataStack: CoreDataStack
-    let apiClient: APIClient
-    let keychainService: KeychainService
+    private var modelContainer: ModelContainer?
+    private var coreDataStack: CoreDataStack?
+    private var apiClient: APIClient?
+    private var keychainService: KeychainService?
 
     // MARK: - Init
 
     init() throws {
-        modelContainer = try ModelContainer(for:
-            TimetableEntrySD.self,
-            CampusEventSD.self
-        )
-        coreDataStack = CoreDataStack(name: "CampusApp")
-        apiClient = APIClient(baseURL: URL(string: "https://api.campus.edu/v1")!)
-        keychainService = KeychainService()
+        if !useMockData {
+            modelContainer = try ModelContainer(for:
+                TimetableEntrySD.self,
+                CampusEventSD.self
+            )
+            coreDataStack = CoreDataStack(name: "CampusApp")
+            apiClient = APIClient(baseURL: URL(string: "https://api.campus.edu/v1")!)
+            keychainService = KeychainService()
+        }
     }
 
     // MARK: - Repositories
 
     func makeTimetableRepository() -> TimetableRepository {
-        TimetableRepositoryImpl(modelContext: modelContainer.mainContext)
+        if useMockData {
+            return MockTimetableRepository()
+        }
+        return TimetableRepositoryImpl(modelContext: modelContainer!.mainContext)
     }
 
     func makeEventRepository() -> EventRepository {
-        EventRepositoryImpl(modelContext: modelContainer.mainContext)
+        if useMockData {
+            return MockEventRepository()
+        }
+        return EventRepositoryImpl(modelContext: modelContainer!.mainContext)
     }
 
     func makeStudentRepository() -> StudentRepository {
-        StudentRepositoryImpl(
-            context: coreDataStack.viewContext,
-            keychain: keychainService
+        if useMockData {
+            return MockStudentRepository()
+        }
+        return StudentRepositoryImpl(
+            context: coreDataStack!.viewContext,
+            keychain: keychainService!
         )
     }
 
     func makeTicketRepository() -> TicketRepository {
-        TicketRepositoryImpl(
-            context: coreDataStack.viewContext,
-            apiClient: apiClient
+        if useMockData {
+            return MockTicketRepository()
+        }
+        return TicketRepositoryImpl(
+            context: coreDataStack!.viewContext,
+            apiClient: apiClient!
         )
     }
 
