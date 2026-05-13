@@ -1,7 +1,7 @@
 import Foundation
 
 protocol FetchTimetableUseCase {
-    func execute(for week: DateInterval) async throws -> [TimetableEntry]
+    func execute(from start: Date, to end: Date) async throws -> [TimetableEntry]
 }
 
 final class FetchTimetableUseCaseImpl: FetchTimetableUseCase {
@@ -11,7 +11,7 @@ final class FetchTimetableUseCaseImpl: FetchTimetableUseCase {
         self.repository = repository
     }
 
-    func execute(for week: DateInterval) async throws -> [TimetableEntry] {
-        return try await repository.fetchEntries(for: week)
+    func execute(from start: Date, to end: Date) async throws -> [TimetableEntry] {
+        return try await repository.fetchEntries(from: start, to: end)
     }
 }

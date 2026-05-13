@@ -1,58 +1,75 @@
 import SwiftUI
 
+// MARK: - App Accent Color
+// Single accent: system indigo — maps to .indigo in both light & dark mode.
+// Change once here to update the entire app.
+extension Color {
+    static let appAccent = Color.indigo
+}
+
+// MARK: - Loading View
+/// Full-screen native loading indicator, HIG-compliant.
 struct LoadingView: View {
+    var message: String = "Memuat..."
+
     var body: some View {
-        VStack {
-            ProgressView()
-                .scaleEffect(1.5)
-            Text("Memuat...")
-                .font(.body)
-                .foregroundStyle(.secondary)
+        ContentUnavailableView {
+            Label {
+                Text(message)
+            } icon: {
+                ProgressView()
+                    .controlSize(.large)
+                    .tint(.appAccent)
+            }
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color(.systemBackground))
     }
 }
 
+// MARK: - Error View
 struct ErrorView: View {
     let message: String
     let action: () -> Void
 
     var body: some View {
-        VStack(spacing: 16) {
-            Image(systemName: "exclamationmark.circle")
-                .font(.system(size: 50))
-                .foregroundStyle(.red)
-            Text("Terjadi Kesalahan")
-                .font(.headline)
+        ContentUnavailableView {
+            Label("Terjadi Kesalahan", systemImage: "exclamationmark.triangle.fill")
+        } description: {
             Text(message)
-                .font(.body)
-                .foregroundStyle(.secondary)
-                .multilineTextAlignment(.center)
-            Button("Coba Lagi") {
-                action()
+        } actions: {
+            Button(action: action) {
+                Label("Coba Lagi", systemImage: "arrow.clockwise")
             }
-            .buttonStyle(.bordered)
+            .buttonStyle(.borderedProminent)
+            .tint(.appAccent)
         }
-        .padding()
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color(.systemBackground))
     }
 }
 
+// MARK: - Empty State View
 struct EmptyStateView: View {
     let message: String
+    var icon: String = "tray.fill"
 
     var body: some View {
-        VStack(spacing: 16) {
-            Image(systemName: "square.stack.3d.up.slash")
-                .font(.system(size: 50))
-                .foregroundStyle(.gray)
-            Text(message)
-                .font(.body)
-                .foregroundStyle(.secondary)
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color(.systemBackground))
+        ContentUnavailableView(message, systemImage: icon)
+    }
+}
+
+// MARK: - Category Badge
+/// A compact, pill-shaped category label using system colors.
+struct CategoryBadge: View {
+    let title: String
+    let color: Color
+
+    var body: some View {
+        Text(title)
+            .font(.caption2.weight(.semibold))
+            .textCase(.uppercase)
+            .tracking(0.5)
+            .foregroundStyle(color)
+            .padding(.horizontal, 8)
+            .padding(.vertical, 3)
+            .background(color.opacity(0.12), in: Capsule())
+            .overlay(Capsule().strokeBorder(color.opacity(0.2), lineWidth: 0.5))
     }
 }
